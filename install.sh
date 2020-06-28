@@ -6,7 +6,7 @@ read username
 
 scripts/install_dependencies.sh
 
-scripts/user_setup.sh
+scripts/user_setup.sh $username
 
 
 # the user needs to be able to use sudo without inputing the passwords so it doesn't ask constantly
