@@ -17,6 +17,7 @@ else
 	echo "[ User already exists ]"
 fi
 
+groupadd sudo
 usermod -a -G sudo,wheel "$1" >/dev/null 2>&1
 passwd "$1"
 
