@@ -16,8 +16,8 @@ clone_repo ()
 
 move_file ()
 {
-	if ! sudo -u $1 mov /tmp/autorice/$2 ~/$3; then
-		echo "[ Could not move file /tmp/autorice/$2 to ~/$3 ]"
+	if ! sudo -u $1 mov /tmp/autorice/$2 /home/$1/$3; then
+		echo "[ Could not move file /tmp/autorice/$2 to /home/$1/$3 ]"
 		return 1
 	fi
 }
