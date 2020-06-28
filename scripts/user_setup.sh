@@ -22,6 +22,6 @@ passwd "$1"
 
 # make customised folders
 
-sudo -u "$1" mkdir ~/Projects ~/Tools ~/CTF
+sudo -u "$1" mkdir /home/$1/Projects /home/$1/Tools /home/$1/CTF
 
 
