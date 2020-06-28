@@ -14,4 +14,6 @@ passwd "$1"
 
 # make customised folders
 
+sudo -u "$1" mkdir ~/Projects ~/Tools ~/CTF
+
 
