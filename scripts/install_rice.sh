@@ -9,12 +9,12 @@ fi
 
 clone_repo ()
 {
-	sudo -u $1 git clone $2 ~/Projects >/dev/null 2>&1
+	sudo -u $1 git clone $2 ~/Projects >/dev/null 2>&1 || ( echo "[ Could not clone $2 ]" )
 }
 
 run_install ()
 {
-	sudo -u $1 ~/Projects/$2 >/dev/null 2>&1 || echo "[ Could not run $2 ]"
+	sudo -u $1 ~/Projects/$2 >/dev/null 2>&1 || ( echo "[ Could not run $2 ]" )
 }
 
 
