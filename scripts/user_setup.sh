@@ -8,7 +8,16 @@ then
 fi
 
 
-useradd -m "$1" >/dev/null 2>&1 || ( echo "[ Could not add user ]"; exit 1; )
+exists=$(grep -c "^$1:" /etc/passwd)
+if [ $exists -eq 0 ]; then
+	if ! useradd -m "$1" >/dev/null 2>&1; then
+		echo "[ Could not add user ]"
+		exit 1
+	fi
+else
+	echo "[ User already exists ]"
+fi
+
 usermod -a -G sudo,wheel "$1" >/dev/null 2>&1
 passwd "$1"
 
