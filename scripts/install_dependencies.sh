@@ -13,14 +13,14 @@ if ! pacman --noconfirm --needed -S base-devel git vim neovim >/dev/null 2>&1; t
 fi
 
 # yay - the aur helper of choice
-if [ -d /tmp/autorice/yay ]; then
-	echo "[ yay found, redownloading - just to be sure ]"
-	rm -rf /tmp/autorice/yay >/dev/null 2>&1
+if [ -d /tmp/autorice ]; then
+	echo "[ autorice found, redownloading - just to be sure ]"
+	rm -rf /tmp/autorice >/dev/null 2>&1
 fi
 
 sudo -u "$1" mkdir /tmp/autorice
 cd /tmp/autorice
-sudo -u "$1" git clone https://aur.archlinux.org/yay.git
+sudo -u "$1" git clone https://aur.archlinux.org/yay.git >/dev/null 2>&1
 cd yay
 
 if ! sudo -u "$1" makepkg -si --noconfirm --needed >/dev/null 2>&1; then
