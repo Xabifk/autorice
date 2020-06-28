@@ -13,9 +13,9 @@ fi
 echo "[ Installing drivers ]"
 
 # may be part of kernal 5.8
-sudo -u "$1" yay -S --noconfirm "rtl8821ce-dkms-git" >/dev/null 2>&1 || echo "[ Could not install wireless driver! ]"; exit 1;
+sudo -u "$1" yay -S --noconfirm "rtl8821ce-dkms-git" >/dev/null 2>&1 || echo "[ Could not install wireless driver ]"; exit 1;
 # driver for fan and keyboard
-sudo -u "$1" yay -S --noconfirm "faustus-dkms-git" >/dev/null 2>&1 || echo "[ Could not install faustus! ]"; exit 1;
+sudo -u "$1" yay -S --noconfirm "faustus-dkms-git" >/dev/null 2>&1 || echo "[ Could not install faustus ]"; exit 1;
 
 
 echo "[ Finished installing drivers ]"
