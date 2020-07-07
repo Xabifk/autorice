@@ -7,7 +7,7 @@ fi
 
 echo "[ Installing programs ]"
 
-while IFS=, read -r place name
+awk -F# '{ print $1 }' configs/programs.csv | awk -F, '{ if(NF == 2){ printf "%s,%s\n", $1, $2 } }' | while IFS=, read -r place name
 do
 	place=$(echo $place | xargs echo -n)
 	name=$(echo $name | xargs echo -n)
@@ -33,6 +33,5 @@ do
 			echo "[ Could not run script custom_scripts/$name ]"
 		fi
 	fi
-done < configs/programs.csv
-
+done
 echo "[ Finished installing programs ]"
