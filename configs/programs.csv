@@ -1,2 +1,38 @@
-repo, gnome
+# File format:
+# Comments start with '#'
+# lines that don't have exactly 2 elements separated by a comma are ignored
+# <repo|aur|script>, <name of packet>
+
+# gnome
+repo, eog
+repo, evince
+repo, file-roller
+repo, gdm
+repo, gnome-calculator
+repo, gnome-calendar
+repo, gnome-clocks
+repo, gnome-control-center
+repo, gnome-disk-utility
+repo, gnome-documents
+repo, gnome-font-viewer
+repo, gnome-keyring
+repo, gnome-logs
+repo, gnome-menus
+repo, gnome-photos
+repo, gnome-screenshot
+repo, gnome-session
+repo, gnome-settings-daemon
+repo, gnome-shell
+repo, gnome-shell-extensions
+repo, gnome-system-monitor
+repo, gnome-terminal
+repo, gnome-mutter
+repo, nautilus
+repo, sushi
 script, enable_gnome.sh
+
+
+# drivers
+# this is highly specific to my setup, you likely need to change stuff here
+aur, rtl8821ce-dkms-git # may be part of kernel 5.8
+aur, faustus-dkms-git # for keyboard backlight and fan control
