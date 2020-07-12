@@ -44,7 +44,7 @@ aur, faustus-dkms-git # for keyboard backlight and fan control
 # other software
 
 repo, chromium
-aur, spofiy
+aur, spotify
 repo, discord
 repo, neovim
 repo, vim
