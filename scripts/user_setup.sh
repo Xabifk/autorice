@@ -17,7 +17,7 @@ else
 	echo "[ User already exists ]"
 fi
 
-groupadd sudo
+groupadd sudo >/dev/null 2>$1
 usermod -a -G sudo,wheel "$1" >/dev/null 2>&1
 passwd "$1"
 
@@ -26,6 +26,6 @@ sed -i "s/# %sudo\tALL=(ALL) ALL/%sudo\tALL=(ALL) NOPASSWD: ALL/g" /etc/sudoers
 
 # make customised folders
 
-sudo -u "$1" mkdir /home/$1/Projects /home/$1/Tools /home/$1/CTF
+sudo -u "$1" mkdir /home/$1/Projects /home/$1/Tools /home/$1/CTF || echo "[ Directories were not created ]"
 
 
