@@ -45,6 +45,7 @@ aur, faustus-dkms-git # for keyboard backlight and fan control
 
 repo, chromium
 aur, spotify
+repo, zsh
 repo, discord
 repo, neovim
 repo, vim
@@ -57,6 +58,6 @@ repo, python2
 
 # ctf stuff
 repo, nmap
-repo, wireshark
+repo, wireshark-qt
 aur, one_gadget
 
